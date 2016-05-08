@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script src="/Inheritence/Base.js"></script>
+    <script src="/Inheritence/Inheritence.js"></script>
+    <script>
+        
+        printinfo();
+        
+        var emp = new Employee("194552", 'mythili');
+        document.writeln(emp.GetCompleteDetails()+'\n');
+
+        var permEmp = new PermananetEmployee("sd");
+        document.writeln('\n'+permEmp.GetCompleteDetails() + '\n');
+
+        function printinfo() {
+            document.writeln("\nprint info\n");
+        }
+       
+    </script>
+</body>
+</html>
