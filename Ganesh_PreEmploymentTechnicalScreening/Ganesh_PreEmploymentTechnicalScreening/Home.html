@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script src="scripts/jquery-2.2.3.js"></script>
+    <script src="JsonProcessor.js"></script>
+    <!--
+        <div>
+        <label>Enter Node Id:</label>
+        <input type="text" name="NodeID" id="NodeID" value="1" />
+        <!--<input type="button" onclick="GetLableInfo()" />
+    </div>
+    <div id="result">
+        
+    </div>
+    -->
+    <script>
+        GetLableInfo();
+        function GetLableInfo()
+        {
+          
+            //var id = $("#NodeID").val();
+            //if ( id== "") {
+            //    alert("Node ID is empty");
+            //    return;
+            //}
+
+            var response = GetJsonData();
+            response.then(function (data) {
+
+                var result = GetLabel(data, 2);
+                //$("#result").html('Lable Name for Id ' + id + ' is ' + result);
+
+            }, function (err) {
+                console.log('Error occured while loading Json data.:' + err.responseText);
+            });
+        }
+        
+
+        function GetLabel(data,Id)
+        {
+            
+            for (field in data) {               
+                if (typeof (data[field]) == "object")
+                {
+                    GetLabel(data[field], Id)
+                }
+                else
+                {
+                    if (data[field] == Id) {
+                        var result =data['Label'];                        
+                    }
+                }               
+            }
+             
+        }
+        
+    </script>
+</body>
+</html>

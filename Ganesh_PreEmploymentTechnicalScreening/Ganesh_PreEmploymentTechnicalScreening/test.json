@@ -1,0 +1,33 @@
+﻿{
+  "Id": 1,
+  "Label": "A",
+  "ChildNodes": [
+    {
+      "Id": 2,
+      "Label": "B",
+      "ChildNodes": [
+        {
+          "Id": 5,
+          "Label": "E"
+        },
+        {
+          "Id": 6,
+          "Label": "F"
+
+        },
+        {
+          "Id": 7,
+          "Label": "G"
+
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Label": "C"
+    }
+
+  ]
+}
+
+

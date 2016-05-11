@@ -1,0 +1,22 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "Id": {
+      "description": "Node ID",
+      "type": "integer",
+      "required": "true"
+    },
+    "Label": {
+      "description": "Label Name",
+      "type": "string"
+    },
+    "ChildNodes": {
+      "description": "List of Child Nodes",
+      "type": "array",
+      "items": {
+        "$ref" : "#"
+      } 
+    }      
+  }
+
+}
